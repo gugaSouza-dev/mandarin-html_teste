@@ -1,0 +1,300 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.positioning{
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+main{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    width: 1em;
+	position: absolute;
+	left: -999em;
+	overflow: hidden;
+}
+
+/* HEADER */
+
+header{
+    background: linear-gradient(90deg, #E9492A, #E83A3B, #E72357)
+}
+
+.trends-banner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    height: 400px;
+}
+
+.trends-banner h2{
+    width: 360px;
+    font-size: 80px;
+    color: white;
+}
+
+.trends-banner img{
+    height: 300px;
+    position: absolute;
+    top: 140px;
+    left: 500px;
+}
+
+.topics{
+    text-align: right;
+    font-size: 24px;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color: white;
+}
+
+.topics img{
+    position: unset;
+    height: 50px;
+}
+
+.edition{
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+/* HEADER END */
+
+/* MAIN */
+
+.trends-news{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-bottom: 50px;
+}
+
+.trends-news>div{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    gap: 25px;
+}
+
+.big-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.big-card h2 a{
+    text-decoration: none;
+    color: black;
+    font-size: 36px;
+}
+
+.big-card p a{
+    color: rgb(121, 121, 121);
+    font-size: 24px;
+}
+
+.big-card span{
+    color: rgb(161, 161, 161);
+    font-size: 18px;
+}
+
+.big-card .line{
+    margin-top: 10px;
+    width: 45%;
+    height: 8px;
+    border-radius: 5px;
+    background: linear-gradient(90deg, red, purple, darkblue);
+}
+
+.card{
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.card h2 a{
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+}
+
+.card span{
+    color: rgb(126, 126, 126);
+}
+
+.card .line{
+    margin-top: 10px;
+    width: 65%;
+    height: 8px;
+    border-radius: 5px;
+    background: linear-gradient(90deg, cyan, blue, #2354A6);
+}
+
+.card .line-two{
+    margin-top: 10px;
+    width: 65%;
+    height: 8px;
+    border-radius: 5px;
+    background: linear-gradient(90deg, springgreen, mediumseagreen);
+}
+
+/* MAIN END */
+
+/* FOOTER */
+
+footer{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.container{
+    background-color: #FC4C02;
+    width: 100%;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.trends-slogan{
+    width: 100%;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.trends-slogan .divisor{
+    height: 100px;
+    width: 3px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.trends-slogan>div{
+    display: flex;
+    flex-direction: column;
+}
+
+.trends-slogan>span{
+    font-size: 48px;
+    font-weight: bold;
+    color: white;
+}
+
+.trends-slogan>div span{
+    font-size: 36px;
+    color: white;
+}
+
+.trends-copyright{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.trends-copyright{
+    color: rgb(99, 99, 99);
+}
+
+.trends-copyright a{
+    text-decoration: underline;
+}
+
+/* FOOTER END */
+
+@media screen and (max-width: 1000px) {
+    .trends-banner img{
+        left: 350px;
+    }
+}
+
+@media screen and (max-width: 830px) {
+    header{
+        justify-content: center;
+        align-items: center;
+    }
+
+    .trends-banner{
+        height: 300px;
+    }
+
+    .trends-banner img{
+        display: none;
+    }
+
+    .topics{
+        justify-content: center;
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 670px) {
+    .topics{
+        text-align: center;
+        
+    }
+
+    .trends-banner{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .big-card img{
+        width: 95%;
+        align-self: center;
+    }
+    
+    .card{
+        min-width: 300px;
+        width: auto;
+    }
+    
+    .trends-news>div{
+        flex-wrap: wrap;
+    }
+
+    .container{
+        min-width: 300px;
+        width: auto;
+        height: auto;
+    }
+
+    .trends-slogan .divisor{
+        display: none;
+    }
+
+    .trends-slogan{
+        flex-wrap: wrap;
+        height: fit-content;
+        gap: 25px;
+        padding: 10px;
+    }
+
+    .trends-copyright{
+        text-align: center;
+    }
+
+}
