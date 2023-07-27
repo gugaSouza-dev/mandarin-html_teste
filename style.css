@@ -34,20 +34,42 @@ header{
     justify-content: space-between;
     align-items: center;
     position: relative;
-    height: 400px;
+    height: 275px;
 }
 
 .trends-banner h2{
     width: 360px;
-    font-size: 80px;
+    font-size: 69px;
+    text-transform: uppercase;
     color: white;
 }
 
-.trends-banner img{
+.woman{
     height: 300px;
     position: absolute;
-    top: 140px;
-    left: 500px;
+    top: 38%;
+    left: 45%;
+}
+
+.dotted{
+    position: absolute;
+    left: 30%;
+    top: 80%;
+    height: 100px;
+}
+
+.arrows{
+    left: 45%;
+    position: absolute;
+    top: 15%;
+    height: 30px;
+}
+
+.circle_lines{
+    position: absolute;
+    height: 300px;
+    left: -200px;
+    top: 65px;
 }
 
 .topics{
@@ -60,15 +82,16 @@ header{
     color: white;
 }
 
-.topics img{
-    position: unset;
-    height: 50px;
-}
-
 .edition{
     display: flex;
     flex-direction: column;
     color: white;
+    gap: 15px;
+}
+
+.waves{
+    width: 200px;
+    align-self: flex-end;
 }
 
 /* HEADER END */
@@ -91,6 +114,7 @@ header{
 }
 
 .big-card{
+    z-index: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -226,8 +250,13 @@ footer{
 /* FOOTER END */
 
 @media screen and (max-width: 1000px) {
-    .trends-banner img{
-        left: 350px;
+    
+    .woman{
+        left: 35%;
+    }
+
+    .arrows{
+        left: 50%;
     }
 }
 
@@ -237,11 +266,11 @@ footer{
         align-items: center;
     }
 
-    .trends-banner{
+    /* .trends-banner{
         height: 300px;
-    }
+    } */
 
-    .trends-banner img{
+    .woman{
         display: none;
     }
 
@@ -254,12 +283,26 @@ footer{
 @media screen and (max-width: 670px) {
     .topics{
         text-align: center;
-        
     }
 
     .trends-banner{
         flex-direction: column;
         text-align: center;
+        height: 350px;
+        justify-content: space-around;
+    }
+
+    .trends-banner h2{
+        font-size: 48px;
+        width: 70%;
+    }
+
+    .trends-banner img{
+        display: none;
+    }
+
+    .topics{
+        height: 60%;
     }
 
     .big-card img{
@@ -274,16 +317,13 @@ footer{
     
     .trends-news>div{
         flex-wrap: wrap;
+        text-align: center;
     }
 
     .container{
         min-width: 300px;
         width: auto;
         height: auto;
-    }
-
-    .trends-slogan .divisor{
-        display: none;
     }
 
     .trends-slogan{
@@ -298,3 +338,14 @@ footer{
     }
 
 }
+
+@media screen and (max-width: 460px) {
+    .trends-slogan .divisor{
+        display: none;
+    }
+
+    .trends-slogan>div{
+        text-align: center;
+    }
+}
+
