@@ -26,7 +26,7 @@ h1 {
 /* HEADER */
 
 header{
-    background: linear-gradient(90deg, #E9492A, #E83A3B, #E72357)
+    background: linear-gradient(150deg, #E9492A, #E83A3B, #E72357)
 }
 
 .trends-banner{
@@ -258,6 +258,18 @@ footer{
     .arrows{
         left: 50%;
     }
+
+    .big-card .line{
+        width: 100%;
+    }
+
+    .card .line{
+        width: 100%;
+    }
+
+    .card .line-two{
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 830px) {
@@ -313,11 +325,14 @@ footer{
     .card{
         min-width: 300px;
         width: auto;
+        gap: 25px;
     }
     
     .trends-news>div{
         flex-wrap: wrap;
         text-align: center;
+        gap: 50px;
+        
     }
 
     .container{
