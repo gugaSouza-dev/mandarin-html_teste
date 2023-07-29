@@ -1,23 +1,65 @@
+@font-face {
+	font-family: 'Concert One';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url(https://fonts.gstatic.com/s/concertone/v17/VEM1Ro9xs5PjtzCu-srDqSTijP4.woff2) format('woff2');
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+	font-family: 'Kalam';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url(https://fonts.gstatic.com/s/kalam/v16/YA9dr0Wd4kDdMthROCc.woff2) format('woff2');
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+	font-family: 'Lato';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url(https://fonts.gstatic.com/s/lato/v24/S6uyw4BMUTPHjx4wXg.woff2) format('woff2');
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+	font-family: 'Ubuntu';
+	font-style: normal;
+	font-weight: 500;
+	font-display: swap;
+	src: url(https://fonts.gstatic.com/s/ubuntu/v20/4iCv6KVjbNBYlgoCjC3jsGyN.woff2) format('woff2');
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+:root{
+	--manda_header: 'Concert One', cursive;
+	--left_footer: 'Kalam', cursive;
+	--titles: 'Lato', sans-serif;
+}
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 .positioning{
-    width: 90%;
-    max-width: 1100px;
-    margin: 0 auto;
+	width: 90%;
+	max-width: 1100px;
+	margin: 0 auto;
 }
 
 main{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
 }
 
 h1 {
-    width: 1em;
+	width: 1em;
 	position: absolute;
 	left: -999em;
 	overflow: hidden;
@@ -26,72 +68,84 @@ h1 {
 /* HEADER */
 
 header{
-    background: linear-gradient(150deg, #E9492A, #E83A3B, #E72357)
+	background: linear-gradient(150deg, #E9492A, #E94330, #E72B4D, #E72357)
 }
 
 .trends-banner{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    height: 275px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+	height: 275px;
 }
 
-.trends-banner h2{
-    width: 360px;
-    font-size: 69px;
-    text-transform: uppercase;
-    color: white;
+.logo-manda-trends{
+	height: 120px;
+	z-index: 1;
 }
 
 .woman{
-    height: 300px;
-    position: absolute;
-    top: 38%;
-    left: 45%;
+	height: 300px;
+	position: absolute;
+	top: 38%;
+	left: 45%;
 }
 
 .dotted{
-    position: absolute;
-    left: 30%;
-    top: 80%;
-    height: 100px;
+	position: absolute;
+	left: 30%;
+	top: 80%;
+	height: 100px;
 }
 
 .arrows{
-    left: 45%;
-    position: absolute;
-    top: 15%;
-    height: 30px;
+	left: 45%;
+	position: absolute;
+	top: 15%;
+	height: 30px;
+	opacity: 0.5;
 }
 
 .circle_lines{
-    position: absolute;
-    height: 300px;
-    left: -200px;
-    top: 65px;
+	position: absolute;
+	height: 300px;
+	left: -200px;
+	top: 65px;
+}
+
+.triangle{
+	position: absolute;
+    left: 100%;
+    height: 30px;
+    top: 7%;
 }
 
 .topics{
-    text-align: right;
-    font-size: 24px;
-    height: 80%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    color: white;
+	text-align: right;
+	font-size: 24px;
+	font-family: var(--titles);
+	height: 80%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	color: white;
 }
 
 .edition{
-    display: flex;
-    flex-direction: column;
-    color: white;
-    gap: 15px;
+	display: flex;
+	flex-direction: column;
+	color: white;
+	gap: 15px;
+}
+
+.edition span{
+	font-family: sans-serif;
+    font-size: 18px;
 }
 
 .waves{
-    width: 200px;
-    align-self: flex-end;
+	width: 200px;
+	align-self: flex-end;
 }
 
 /* HEADER END */
@@ -99,84 +153,102 @@ header{
 /* MAIN */
 
 .trends-news{
-    margin-top: 50px;
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
-    margin-bottom: 50px;
+	margin: 15px 0 50px 0;
+	display: flex;
+	flex-direction: column;
+	gap: 50px;
 }
 
 .trends-news>div{
-    display: flex;
-    width: 100%;
-    justify-content: space-around;
-    gap: 25px;
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	gap: 25px;
 }
 
 .big-card{
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 20px;
+	z-index: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 20px;
+	font-family: var(--titles);
+}
+
+.big-card img{
+	width: 100%;
 }
 
 .big-card h2 a{
-    text-decoration: none;
-    color: black;
-    font-size: 36px;
+	text-decoration: none;
+	color: black;
+	font-size: 36px;
 }
 
 .big-card p a{
-    color: rgb(121, 121, 121);
-    font-size: 24px;
+	color: rgb(121, 121, 121);
+	font-size: 24px;
 }
 
-.big-card span{
-    color: rgb(161, 161, 161);
-    font-size: 18px;
+.news-sorce{
+	color: rgb(161, 161, 161);
+	font-size: 14px;
+	font-style: italic;
+	font-weight: bold;
+	font-family: var(--titles);
 }
 
 .big-card .line{
-    margin-top: 10px;
-    width: 45%;
-    height: 8px;
-    border-radius: 5px;
-    background: linear-gradient(90deg, red, purple, darkblue);
+	margin-top: 10px;
+	width: 45%;
+	height: 8px;
+	border-radius: 5px;
+	background: linear-gradient(90deg, red, purple, darkblue);
+}
+
+.card-holder{
+	display: flex;
+	justify-content: space-between;
+	gap: 100px;
+}
+
+.card-holder .card h2 a{
+	font-family: var(--titles);
 }
 
 .card{
-    width: 45%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+	width: 45%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	text-align: left;
+	gap: 15px;
 }
 
+.card img{
+	width: 100%;
+}
 
 .card h2 a{
-    text-decoration: none;
-    color: black;
-    font-size: 30px;
-}
-
-.card span{
-    color: rgb(126, 126, 126);
+	text-decoration: none;
+	color: black;
+	font-size: 30px;
 }
 
 .card .line{
-    margin-top: 10px;
-    width: 65%;
-    height: 8px;
-    border-radius: 5px;
-    background: linear-gradient(90deg, cyan, blue, #2354A6);
+	margin-top: 10px;
+	width: 65%;
+	height: 8px;
+	border-radius: 5px;
+	background: linear-gradient(90deg, cyan, blue, #2354A6);
 }
 
 .card .line-two{
-    margin-top: 10px;
-    width: 65%;
-    height: 8px;
-    border-radius: 5px;
-    background: linear-gradient(90deg, springgreen, mediumseagreen);
+	margin-top: 10px;
+	width: 65%;
+	height: 8px;
+	border-radius: 5px;
+	background: linear-gradient(90deg, springgreen, mediumseagreen);
 }
 
 /* MAIN END */
@@ -184,183 +256,225 @@ header{
 /* FOOTER */
 
 footer{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
 }
 
 .container{
-    background-color: #FC4C02;
-    width: 100%;
-    height: 150px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 30px;
+	background-color: #FC4C02;
+	width: 100%;
+	height: 150px;
+	display: flex;
+	gap: 30px;
 }
 
 .trends-slogan{
-    width: 100%;
-    height: 150px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 30px;
+	width: 100%;
+	height: 150px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 30px;
 }
 
 .trends-slogan .divisor{
-    height: 100px;
-    width: 3px;
-    background-color: white;
-    border-radius: 5px;
+	height: 100px;
+	width: 3px;
+	background-color: white;
+	border-radius: 5px;
+}
+
+.trends-slogan span{
+	font-family: 'Ubuntu', sans-serif;
+	color: white;
+	font-size: 48px;
 }
 
 .trends-slogan>div{
-    display: flex;
-    flex-direction: column;
-}
-
-.trends-slogan>span{
-    font-size: 48px;
-    font-weight: bold;
-    color: white;
+	display: flex;
+	flex-direction: column;
 }
 
 .trends-slogan>div span{
-    font-size: 36px;
-    color: white;
+	font-size: 40px;
+	color: white;
+	text-align: center;
+	font-family: var(--left_footer)
+}
+
+.trends-slogan>div span strong{
+	font-size: 40px;
+	font-weight: bold;
+	color: white;
+}
+
+
+.trends-copyright{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 25px;
 }
 
 .trends-copyright{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 25px;
-}
-
-.trends-copyright{
-    color: rgb(99, 99, 99);
+	color: rgb(99, 99, 99);
 }
 
 .trends-copyright a{
-    text-decoration: underline;
+	text-decoration: underline;
 }
 
 /* FOOTER END */
 
 @media screen and (max-width: 1000px) {
-    
-    .woman{
-        left: 35%;
-    }
+	
+	.woman{
+		left: 35%;
+	}
 
-    .arrows{
-        left: 50%;
-    }
+	.arrows{
+		left: 50%;
+	}
 
-    .big-card .line{
-        width: 100%;
-    }
+	.triangle{
+		left: 80%;
+	}
 
-    .card .line{
-        width: 100%;
-    }
+	.big-card .line{
+		width: 100%;
+	}
 
-    .card .line-two{
-        width: 100%;
-    }
+	.card .line{
+		width: 100%;
+	}
+
+	.card .line-two{
+		width: 100%;
+	}
 }
 
 @media screen and (max-width: 830px) {
-    header{
-        justify-content: center;
-        align-items: center;
-    }
+	header{
+		justify-content: center;
+		align-items: center;
+	}
 
-    /* .trends-banner{
-        height: 300px;
-    } */
+	.woman{
+		display: none;
+	}
 
-    .woman{
-        display: none;
-    }
-
-    .topics{
-        justify-content: center;
-        gap: 20px;
-    }
+	.topics{
+		justify-content: center;
+		gap: 20px;
+	}
 }
 
 @media screen and (max-width: 670px) {
-    .topics{
-        text-align: center;
-    }
+	.topics{
+		text-align: center;
+	}
 
-    .trends-banner{
-        flex-direction: column;
-        text-align: center;
-        height: 350px;
-        justify-content: space-around;
-    }
+	.trends-banner{
+		flex-direction: column;
+		text-align: center;
+		height: 350px;
+		justify-content: space-around;
+		padding-top: 30px;
+	}
 
-    .trends-banner h2{
-        font-size: 48px;
-        width: 70%;
-    }
+	.woman{
+		display: none;
+	}
 
-    .trends-banner img{
-        display: none;
-    }
+	.topics{
+		height: 60%;
+	}
 
-    .topics{
-        height: 60%;
-    }
+	.big-card img{
+		width: 100%;
+		align-self: center;
+	}
+	
+	.card{
+		min-width: 300px;
+		width: auto;
+		gap: 15px;
+	}
+	
+	.trends-news .card-holder{
+		flex-wrap: wrap;
+		text-align: center;
+	    gap: 50px;		
+	}
 
-    .big-card img{
-        width: 95%;
-        align-self: center;
-    }
-    
-    .card{
-        min-width: 300px;
-        width: auto;
-        gap: 25px;
-    }
-    
-    .trends-news>div{
-        flex-wrap: wrap;
-        text-align: center;
-        gap: 50px;
-        
-    }
+	.container{
+		min-width: 300px;
+		width: auto;
+		height: auto;
+	}
 
-    .container{
-        min-width: 300px;
-        width: auto;
-        height: auto;
-    }
+	.trends-slogan{
+		flex-wrap: wrap;
+		height: fit-content;
+		gap: 25px;
+		padding: 10px;
+	}
 
-    .trends-slogan{
-        flex-wrap: wrap;
-        height: fit-content;
-        gap: 25px;
-        padding: 10px;
-    }
-
-    .trends-copyright{
-        text-align: center;
-    }
+	.trends-copyright{
+		text-align: center;
+	}
 
 }
 
-@media screen and (max-width: 460px) {
-    .trends-slogan .divisor{
-        display: none;
-    }
+@media screen and (max-width: 670px){
+	.arrows, .dotted, .waves{
+		display: none;
+	}
 
-    .trends-slogan>div{
-        text-align: center;
-    }
+	.big-card>div{
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+	}
+}
+
+@media screen and (max-width: 520px){
+	.circle_lines, .triangle{
+		display: none;
+	}
+
+	.logo-manda-trends{
+		height: 100px;
+	}
+
+	footer{
+		flex-direction: column;
+	}
+
+	.trends-slogan .divisor{
+		display: none;
+	}
+}
+
+@media screen and (max-width: 460px) {
+	.trends-slogan>div{
+		text-align: center;
+	}
+
+	.logo-manda-trends{
+		height: 90px;
+	}
+
+	.topics h3{
+		font-size: 24px;
+	}
+
+	.card img{
+		width: 95%;
+		align-self: center;
+	}
+
 }
 
